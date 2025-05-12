@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos');
+body {
+    margin: 0;
+    background-color: #1B1D25;
+    color:#DFE0E1
+}
+div.header {
+    color: #DFE0E1;
+    background-color: #1B1D25;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    font-family: "Tinos";
+}
+
+div.hero {
+    width: 100%;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #DFE0E1;
+}
