@@ -1,23 +1,175 @@
+<!--COPYRIGHT (c) 2025 Env Open-->
+<!--Written by Argo Nickerson (argo@envopen.org)-->
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        
-        <link rel="stylesheet" href="index.css" type="text/css">
-        <title>Env Open</title>
-        <script type="module" src="https://pyscript.net/snapshots/2023.09.1.RC2/core.js"></script>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Env Open is an open-source first software foundation dedicated to creating and maintaining open-source projects that make a difference in the world.">
+    <meta name="keywords" content="open source, software foundation, programming, development, technology">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Env Open">
+    <title>Env Open - Open Source Software Foundation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="media/branding/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="media/branding/logo-nbg.webp" alt="Env Open Logo" class="logo">
+                <span class="brand-text">Env Open</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
 
-    <body>
-        <div class="header">
-            <a href="index.html"><h1>Env Open</h1></a>
-            <a class="button-header" href="projects.html"> projects</a>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Building the Future with Open Source</h1>
+                <p class="hero-subtitle">Env Open is a software foundation committed to creating innovative, open-source solutions that empower developers and communities worldwide.</p>
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn btn-primary">Explore Projects</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Open Source</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Forever</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Community</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose Open Source?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔓</div>
+                        <h3>Transparency</h3>
+                        <p>Every line of code is open for inspection, ensuring trust and accountability in our development process.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Collaboration</h3>
+                        <p>We believe in the power of community-driven development and welcome contributions from developers worldwide.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Innovation</h3>
+                        <p>Open source accelerates innovation by allowing rapid iteration and improvement from diverse perspectives.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Accessibility</h3>
+                        <p>Our projects are freely available to everyone, removing barriers and democratizing access to technology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission">
+            <div class="container">
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <h2>Our Mission</h2>
+                        <p>Env Open is an open-source first software foundation dedicated to creating and maintaining projects that make a positive impact on the world. We believe that open source software is the foundation of innovation and collaboration in the digital age.</p>
+                        <p>Our team consists of passionate developers who are committed to building tools and platforms that empower others to create, learn, and succeed. Every project we develop follows our core principle: <strong>Open Source, Forever</strong>.</p>
+                        <a href="about.html" class="btn btn-outline">Learn About Our Story</a>
+                    </div>
+                    <div class="mission-visual">
+                        <div class="code-snippet">
+                            <div class="code-header">
+                                <div class="code-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <span>our-mission.js</span>
+                            </div>
+                            <div class="code-content">
+                                <pre><code>const mission = {
+  vision: "Open Source, Forever",
+  goal: "Empower developers worldwide",
+  approach: "Community-driven development",
+  impact: "Positive change through code"
+};</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Join Our Mission?</h2>
+                    <p>Whether you're a developer, designer, or simply passionate about open source, there's a place for you in our community.</p>
+                    <div class="cta-actions">
+                        <a href="projects.html" class="btn btn-primary">View Our Projects</a>
+                        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="media/branding/logo-nbg.webp" alt="Env Open Logo" class="footer-logo">
+                    <p>Building the future with open source software.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Foundation</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="team.html">Our Team</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Projects</h4>
+                        <a href="projects.html">All Projects</a>
+                        <a href="https://github.com/envopentech" target="_blank">GitHub</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="contact.html">Join Us</a>
+                        <a href="#">Contribute</a>
+                        <a href="#">Support</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Env Open. All rights reserved. | Website by Argo Nickerson</p>
+            </div>
         </div>
-        <div class="hero">
-            <h1>Welcome to Env Open</h1>
-            <p>Open source, forever</p>
-            <a class="page-button" href="projects.html">View Our Work</a>
-        </div>
-    </body>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
 </html>
