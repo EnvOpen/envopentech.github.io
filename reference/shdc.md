@@ -7,10 +7,15 @@ This protocol defines a secure communication system between low-power **Sensors*
 **Sent by Sensor as a UDP Broadcast or Multicast**
 
 - Destination: `255.255.255.255:56700` or `239.255.0.1:56700` (official SHDC port)
-- Not encrypted, but signed using the sensor's Ed25519 key **Security Hub**. It supports encrypted **unicast** messages (sensor → hub), **broadcasts** (hub → sensors), and **key management** in a closed, trusted network.
+- Not encrypted, but signed using the sensor's Ed25519 key.
 
 ---
 
+## 1.1 Security Hub Overview
+
+The Security Hub supports encrypted **unicast** messages (sensor → hub), **broadcasts** (hub → sensors), and **key management** in a closed, trusted network.
+
+---
 ## 2. Roles
 
 - **Sensor**: Embedded node sending event/status data.
