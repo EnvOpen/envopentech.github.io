@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Env Open Security Compliance v1.2 - Comprehensive security framework for smart home and security system devices with encryption standards and privacy controls.">
+    <meta name="keywords" content="security compliance, smart home security, IoT security, device authentication, data encryption, privacy framework">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Env Open">
+    <title>Security Compliance Framework v1.2 - Env Open Standards</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="media/branding/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="media/branding/logo-nbg.webp" alt="Env Open Logo" class="logo">
+                <span class="brand-text">Env Open</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="standards.html" class="nav-link">Standards</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="spec-hero">
+            <div class="container">
+                <div class="spec-header">
+                    <div class="spec-info">
+                        <h1 class="spec-title">Security Compliance Framework</h1>
+                        <p class="spec-subtitle">For Smart Home and Security System Devices</p>
+                        <div class="spec-meta">
+                            <span class="version-badge large">Version 1.2</span>
+                            <span class="status-badge active large">Active Development</span>
+                            <span class="date-badge">Updated: July 2025</span>
+                        </div>
+                    </div>
+                    <div class="spec-actions">
+                        <a href="security-compliance-spec.pdf" class="btn btn-primary" download>Download PDF</a>
+                        <a href="https://github.com/envopentech/security-compliance" class="btn btn-outline" target="_blank">Reference Tools</a>
+                    </div>
+                </div>
+                <div class="spec-description">
+                    <p>A comprehensive security compliance framework defining encryption standards, authentication protocols, privacy requirements, and audit procedures for smart home and security system devices. Designed to meet international security standards while remaining practical for implementation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="compliance-overview">
+            <div class="container">
+                <h2 class="section-title">Framework Overview</h2>
+                <div class="compliance-pillars">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">🔐</div>
+                        <h3>Device Authentication</h3>
+                        <p>Multi-factor device identity verification with certificate-based trust chains and hardware security modules.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon">🛡️</div>
+                        <h3>Data Protection</h3>
+                        <p>End-to-end encryption for all data transmissions with authenticated key exchange and perfect forward secrecy.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon">👁️</div>
+                        <h3>Privacy Controls</h3>
+                        <p>User consent management, data minimization principles, and transparent data handling practices.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon">📊</div>
+                        <h3>Audit Framework</h3>
+                        <p>Comprehensive logging, monitoring, and compliance verification with automated assessment tools.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="security-requirements">
+            <div class="container">
+                <h2 class="section-title">Core Security Requirements</h2>
+                <div class="requirements-grid">
+                    <div class="requirement-category">
+                        <h3>🔒 Encryption Standards</h3>
+                        <div class="requirement-list">
+                            <div class="requirement-item mandatory">
+                                <span class="req-label">MANDATORY</span>
+                                <strong>AES-256-GCM or ChaCha20-Poly1305</strong>
+                                <p>All sensitive data must be encrypted with authenticated encryption</p>
+                            </div>
+                            <div class="requirement-item mandatory">
+                                <span class="req-label">MANDATORY</span>
+                                <strong>TLS 1.3 or DTLS 1.3</strong>
+                                <p>Transport layer security for all network communications</p>
+                            </div>
+                            <div class="requirement-item recommended">
+                                <span class="req-label">RECOMMENDED</span>
+                                <strong>Hardware Security Module (HSM)</strong>
+                                <p>Dedicated security chips for key storage and cryptographic operations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="requirement-category">
+                        <h3>🔑 Key Management</h3>
+                        <div class="requirement-list">
+                            <div class="requirement-item mandatory">
+                                <span class="req-label">MANDATORY</span>
+                                <strong>Perfect Forward Secrecy (PFS)</strong>
+                                <p>Session keys must not be derivable from long-term keys</p>
+                            </div>
+                            <div class="requirement-item mandatory">
+                                <span class="req-label">MANDATORY</span>
+                                <strong>Key Rotation</strong>
+                                <p>Automatic key rotation every 24 hours maximum</p>
+                            </div>
+                            <div class="requirement-item mandatory">
+                                <span class="req-label">MANDATORY</span>
+                                <strong>Secure Key Storage</strong>
+                                <p>Keys must be stored in tamper-resistant secure storage</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="requirement-category">
+                        <h3>🛡️ Authentication</h3>
+                        <div class="requirement-list">
+                            <div class="requirement-item mandatory">
+                                <span class="req-label">MANDATORY</span>
+                                <strong>Mutual Authentication</strong>
+                                <p>Both devices must authenticate each other before communication</p>
+                            </div>
+                            <div class="requirement-item mandatory">
+                                <span class="req-label">MANDATORY</span>
+                                <strong>Certificate Validation</strong>
+                                <p>X.509 certificate chain validation with OCSP checking</p>
+                            </div>
+                            <div class="requirement-item recommended">
+                                <span class="req-label">RECOMMENDED</span>
+                                <strong>Multi-Factor Authentication</strong>
+                                <p>Additional authentication factors for critical operations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="requirement-category">
+                        <h3>📱 Device Security</h3>
+                        <div class="requirement-list">
+                            <div class="requirement-item mandatory">
+                                <span class="req-label">MANDATORY</span>
+                                <strong>Secure Boot</strong>
+                                <p>Cryptographically verified boot process with signed firmware</p>
+                            </div>
+                            <div class="requirement-item mandatory">
+                                <span class="req-label">MANDATORY</span>
+                                <strong>Firmware Updates</strong>
+                                <p>Signed, encrypted firmware updates with rollback protection</p>
+                            </div>
+                            <div class="requirement-item mandatory">
+                                <span class="req-label">MANDATORY</span>
+                                <strong>Tamper Detection</strong>
+                                <p>Hardware and software tamper detection with security responses</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="privacy-framework">
+            <div class="container">
+                <h2 class="section-title">Privacy Framework</h2>
+                <div class="privacy-content">
+                    <div class="privacy-principles">
+                        <h3>Core Privacy Principles</h3>
+                        <div class="principle-grid">
+                            <div class="principle-item">
+                                <h4>Data Minimization</h4>
+                                <p>Collect only the minimum data necessary for device functionality</p>
+                            </div>
+                            <div class="principle-item">
+                                <h4>Purpose Limitation</h4>
+                                <p>Use data only for the stated purpose with explicit user consent</p>
+                            </div>
+                            <div class="principle-item">
+                                <h4>Storage Limitation</h4>
+                                <p>Retain data only as long as necessary for the stated purpose</p>
+                            </div>
+                            <div class="principle-item">
+                                <h4>Transparency</h4>
+                                <p>Provide clear, understandable privacy notices and data handling information</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="privacy-controls">
+                        <h3>Required Privacy Controls</h3>
+                        <div class="controls-list">
+                            <div class="control-item">
+                                <div class="control-icon">👤</div>
+                                <div class="control-content">
+                                    <h4>User Consent Management</h4>
+                                    <p>Granular consent controls with easy opt-out mechanisms for all data processing activities</p>
+                                </div>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-icon">🏠</div>
+                                <div class="control-content">
+                                    <h4>Local Data Processing</h4>
+                                    <p>Process sensitive data locally when possible, minimizing cloud data transmission</p>
+                                </div>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-icon">🗂️</div>
+                                <div class="control-content">
+                                    <h4>Data Subject Rights</h4>
+                                    <p>Support for data access, rectification, erasure, and portability rights per GDPR</p>
+                                </div>
+                            </div>
+                            <div class="control-item">
+                                <div class="control-icon">🌍</div>
+                                <div class="control-content">
+                                    <h4>Cross-Border Transfer Protection</h4>
+                                    <p>Adequate safeguards for international data transfers with jurisdiction transparency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="audit-framework">
+            <div class="container">
+                <h2 class="section-title">Audit & Compliance Framework</h2>
+                <div class="audit-content">
+                    <div class="audit-phases">
+                        <div class="phase-card">
+                            <div class="phase-number">1</div>
+                            <h3>Pre-Deployment Assessment</h3>
+                            <ul>
+                                <li>Security architecture review</li>
+                                <li>Cryptographic implementation validation</li>
+                                <li>Privacy impact assessment</li>
+                                <li>Penetration testing</li>
+                            </ul>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-number">2</div>
+                            <h3>Deployment Certification</h3>
+                            <ul>
+                                <li>Compliance verification testing</li>
+                                <li>Security configuration validation</li>
+                                <li>Documentation review</li>
+                                <li>Certificate issuance</li>
+                            </ul>
+                        </div>
+                        <div class="phase-card">
+                            <div class="phase-number">3</div>
+                            <h3>Continuous Monitoring</h3>
+                            <ul>
+                                <li>Real-time security monitoring</li>
+                                <li>Automated compliance checking</li>
+                                <li>Incident response procedures</li>
+                                <li>Regular re-certification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="compliance-levels">
+            <div class="container">
+                <h2 class="section-title">Compliance Levels</h2>
+                <div class="levels-grid">
+                    <div class="level-card basic">
+                        <div class="level-header">
+                            <h3>Basic Compliance</h3>
+                            <span class="level-badge">Level 1</span>
+                        </div>
+                        <div class="level-requirements">
+                            <p>Essential security requirements for consumer devices</p>
+                            <ul>
+                                <li>✓ AES-256 encryption</li>
+                                <li>✓ TLS 1.3 communications</li>
+                                <li>✓ Basic authentication</li>
+                                <li>✓ Secure firmware updates</li>
+                                <li>✓ Privacy notices</li>
+                            </ul>
+                        </div>
+                        <div class="level-footer">
+                            <span class="certification-time">2-4 weeks</span>
+                        </div>
+                    </div>
+
+                    <div class="level-card enhanced">
+                        <div class="level-header">
+                            <h3>Enhanced Compliance</h3>
+                            <span class="level-badge">Level 2</span>
+                        </div>
+                        <div class="level-requirements">
+                            <p>Advanced security for professional and commercial deployments</p>
+                            <ul>
+                                <li>✓ All Level 1 requirements</li>
+                                <li>✓ Hardware security modules</li>
+                                <li>✓ Perfect forward secrecy</li>
+                                <li>✓ Advanced threat detection</li>
+                                <li>✓ Comprehensive audit logging</li>
+                                <li>✓ Multi-factor authentication</li>
+                            </ul>
+                        </div>
+                        <div class="level-footer">
+                            <span class="certification-time">4-8 weeks</span>
+                        </div>
+                    </div>
+
+                    <div class="level-card critical">
+                        <div class="level-header">
+                            <h3>Critical Compliance</h3>
+                            <span class="level-badge">Level 3</span>
+                        </div>
+                        <div class="level-requirements">
+                            <p>Highest security for critical infrastructure and high-value targets</p>
+                            <ul>
+                                <li>✓ All Level 2 requirements</li>
+                                <li>✓ Formal security verification</li>
+                                <li>✓ Zero-trust architecture</li>
+                                <li>✓ Quantum-resistant cryptography</li>
+                                <li>✓ Continuous security monitoring</li>
+                                <li>✓ Government-grade compliance</li>
+                            </ul>
+                        </div>
+                        <div class="level-footer">
+                            <span class="certification-time">8-16 weeks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="implementation-guide">
+            <div class="container">
+                <h2 class="section-title">Implementation Checklist</h2>
+                <div class="checklist-content">
+                    <div class="checklist-category">
+                        <h3>🔧 Technical Implementation</h3>
+                        <div class="checklist-items">
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Implement required encryption algorithms (AES-256-GCM)
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Deploy TLS 1.3 for all network communications
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Configure mutual authentication with X.509 certificates
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Implement secure key storage and rotation
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Deploy secure boot and signed firmware updates
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Implement tamper detection mechanisms
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3>📋 Documentation Requirements</h3>
+                        <div class="checklist-items">
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Security architecture documentation
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Privacy policy and data handling procedures
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Incident response procedures
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                User guides for security features
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Compliance certification documentation
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3>🧪 Testing & Validation</h3>
+                        <div class="checklist-items">
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Automated security testing suite
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Penetration testing by certified professionals
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Cryptographic implementation validation
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Privacy compliance verification
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Performance impact assessment
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certification-process">
+            <div class="container">
+                <h2 class="section-title">Certification Process</h2>
+                <div class="process-content">
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>Initial Assessment</h3>
+                                <p>Submit application with technical documentation and implementation details</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>Technical Review</h3>
+                                <p>Comprehensive review of security architecture and cryptographic implementations</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>Security Testing</h3>
+                                <p>Penetration testing, vulnerability assessment, and compliance verification</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>Certification</h3>
+                                <p>Certificate issuance and ongoing monitoring setup</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="certification-benefits">
+                        <h3>Certification Benefits</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🏆</span>
+                                <span>Market differentiation</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🛡️</span>
+                                <span>Enhanced security posture</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">📋</span>
+                                <span>Regulatory compliance</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🤝</span>
+                                <span>Customer trust</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">📈</span>
+                                <span>Business growth</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">🔍</span>
+                                <span>Continuous monitoring</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spec-resources">
+            <div class="container">
+                <h2 class="section-title">Resources & Tools</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>📖 Complete Framework</h3>
+                        <p>Full security compliance framework specification with detailed requirements and implementation guidance.</p>
+                        <a href="security-compliance-spec.pdf" class="btn btn-outline" download>Download PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spec-support">
+            <div class="container">
+                <div class="support-content">
+                    <h2>Ready to Achieve Compliance?</h2>
+                    <p>Our certified security experts are ready to help you implement the Security Compliance Framework and achieve certification. From initial assessment to ongoing compliance monitoring, we provide end-to-end support.</p>
+                    <div class="support-actions">
+                        <a href="contact.html" class="btn btn-primary">Start Certification</a>
+                        <a href="mailto:compliance@envopen.org" class="btn btn-outline">Contact Compliance Team</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="media/branding/logo-nbg.webp" alt="Env Open Logo" class="footer-logo">
+                    <p>Building the future with open source software.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Foundation</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="team.html">Our Team</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Standards</h4>
+                        <a href="standards.html">All Standards</a>
+                        <a href="shdc-protocol.html">SHDC Protocol</a>
+                        <a href="security-compliance.html">Security Compliance</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="contact.html">Join Us</a>
+                        <a href="https://github.com/envopentech" target="_blank">GitHub</a>
+                        <a href="#">Support</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Env Open. All rights reserved. | Website by Argo Nickerson</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

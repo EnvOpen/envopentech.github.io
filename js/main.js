@@ -442,3 +442,188 @@ function addDynamicStyles() {
 
 // Add dynamic styles when DOM is loaded
 addDynamicStyles();
+
+/**
+ * Tab functionality for specification pages
+ */
+function initTabs() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.dataset.tab;
+            
+            // Update active button
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Show target content
+            tabContents.forEach(content => {
+                if (content.id === targetTab) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        });
+    });
+    
+    // Initialize first tab as active
+    if (tabButtons.length > 0) {
+        tabButtons[0].click();
+    }
+}
+
+/**
+ * Interactive checklists for compliance page
+ */
+function initChecklists() {
+    const checklistItems = document.querySelectorAll('.checklist-item');
+    
+    checklistItems.forEach(item => {
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        const checkmark = item.querySelector('.checkmark');
+        
+        if (checkbox && checkmark) {
+            item.addEventListener('click', function(e) {
+                if (e.target !== checkbox) {
+                    checkbox.checked = !checkbox.checked;
+                    updateChecklistProgress();
+                }
+            });
+            
+            checkbox.addEventListener('change', updateChecklistProgress);
+        }
+    });
+    
+    function updateChecklistProgress() {
+        const categories = document.querySelectorAll('.checklist-category');
+        
+        categories.forEach(category => {
+            const items = category.querySelectorAll('.checklist-item input[type="checkbox"]');
+            const completed = category.querySelectorAll('.checklist-item input[type="checkbox"]:checked');
+            const progress = Math.round((completed.length / items.length) * 100);
+            
+            // Update progress indicator if it exists
+            const progressIndicator = category.querySelector('.progress-indicator');
+            if (progressIndicator) {
+                progressIndicator.textContent = `${progress}% Complete`;
+                progressIndicator.style.color = progress === 100 ? 'var(--success-color)' : 'var(--text-secondary)';
+            }
+        });
+    }
+}
+
+/**
+ * Copy code functionality for code blocks
+ */
+function initCodeCopy() {
+    const codeBlocks = document.querySelectorAll('.code-block');
+    
+    codeBlocks.forEach(block => {
+        const copyBtn = document.createElement('button');
+        copyBtn.textContent = 'Copy';
+        copyBtn.className = 'copy-btn';
+        copyBtn.style.cssText = `
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--accent-color);
+            color: var(--text-inverse);
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        `;
+        
+        block.style.position = 'relative';
+        block.appendChild(copyBtn);
+        
+        copyBtn.addEventListener('click', async function() {
+            const code = block.querySelector('pre').textContent;
+            
+            try {
+                await navigator.clipboard.writeText(code);
+                this.textContent = 'Copied!';
+                this.style.backgroundColor = 'var(--success-color)';
+                
+                setTimeout(() => {
+                    this.textContent = 'Copy';
+                    this.style.backgroundColor = 'var(--accent-color)';
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy code:', err);
+            }
+        });
+    });
+}
+
+/**
+ * Statistics counter animation
+ */
+function initCounters() {
+    const counters = document.querySelectorAll('.stat-number, .stat-value');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const originalText = counter.textContent.trim();
+                
+                // Check if this looks like a pure number or number with simple suffix (like "500+" or "512B")
+                const simpleNumberPattern = /^(\d+)([A-Za-z+\-]*)?$/;
+                const simpleMatch = originalText.match(simpleNumberPattern);
+                
+                if (simpleMatch && simpleMatch[1]) {
+                    const target = parseInt(simpleMatch[1]);
+                    const suffix = simpleMatch[2] || '';
+                    
+                    if (!isNaN(target) && target > 0) {
+                        const duration = 2000; // 2 seconds
+                        const step = target / (duration / 16); // 60fps
+                        
+                        let current = 0;
+                        const timer = setInterval(() => {
+                            current += step;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            // Show animated number with suffix
+                            counter.textContent = Math.floor(current).toLocaleString() + suffix;
+                        }, 16);
+                    }
+                } else {
+                    // For complex text like "IPv4/6", "256-bit", "Zero", "GDPR" - don't animate
+                    // Just ensure the original text is preserved
+                    counter.textContent = originalText;
+                }
+                
+                observer.unobserve(counter);
+            }
+        });
+    });
+    
+    counters.forEach(counter => observer.observe(counter));
+}
+
+// Initialize new functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize tab functionality (for specification pages)
+    if (document.querySelector('.example-tabs')) {
+        initTabs();
+    }
+    
+    // Initialize interactive checklists (for compliance page)
+    if (document.querySelector('.checklist-item')) {
+        initChecklists();
+    }
+    
+    // Initialize code copy functionality
+    initCodeCopy();
+    
+    // Initialize counters
+    initCounters();
+});
