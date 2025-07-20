@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SHDC Protocol v1.0 - Smart Home Device Communications Protocol specification. Secure, lightweight IoT communication for sensors and smart home networks.">
+    <meta name="keywords" content="SHDC protocol, smart home communication, IoT protocol, device communication, AES encryption, Ed25519">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Env Open">
+    <title>SHDC Protocol v1.0 - Env Open Standards</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="media/branding/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="media/branding/logo-nbg.webp" alt="Env Open Logo" class="logo">
+                <span class="brand-text">Env Open</span>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="standards.html" class="nav-link">Standards</a>
+                <a href="team.html" class="nav-link">Team</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="spec-hero">
+            <div class="container">
+                <div class="spec-header">
+                    <div class="spec-info">
+                        <h1 class="spec-title">SHDC Protocol</h1>
+                        <p class="spec-subtitle">Smart Home Device Communications Protocol</p>
+                        <div class="spec-meta">
+                            <span class="version-badge large">Version 1.0</span>
+                            <span class="status-badge stable large">Stable</span>
+                            <span class="date-badge">Released: July 2025</span>
+                        </div>
+                    </div>
+                    <div class="spec-actions">
+                        <a href="reference/shdc.md" class="btn btn-primary" download>Download Spec</a>
+                        <a href="https://github.com/envopentech/shdc" class="btn btn-outline" target="_blank">Implementation</a>
+                    </div>
+                </div>
+                <div class="spec-description">
+                    <p>A secure communication system for low-power sensors and security hubs. SHDC supports encrypted unicast messages, broadcasts, and key management in closed, trusted networks with maximum compatibility for embedded devices.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="spec-overview">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>Transport Layer</h3>
+                        <ul>
+                            <li><strong>Protocol:</strong> UDP (primary), TCP (fallback)</li>
+                            <li><strong>Port:</strong> 56700 (official SHDC port)</li>
+                            <li><strong>Packet Size:</strong> Max 512 bytes</li>
+                            <li><strong>Network:</strong> IPv4/IPv6 supported</li>
+                        </ul>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Security</h3>
+                        <ul>
+                            <li><strong>Encryption:</strong> AES-256-GCM</li>
+                            <li><strong>Signatures:</strong> Ed25519</li>
+                            <li><strong>Key Management:</strong> Automated rotation</li>
+                            <li><strong>Authentication:</strong> Identity-based</li>
+                        </ul>
+                    </div>
+                    <div class="overview-card">
+                        <h3>Device Roles</h3>
+                        <ul>
+                            <li><strong>Sensor:</strong> Embedded nodes sending data</li>
+                            <li><strong>Hub:</strong> Control node handling routing</li>
+                            <li><strong>Discovery:</strong> Automatic network discovery</li>
+                            <li><strong>Topology:</strong> Star network architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spec-features">
+            <div class="container">
+                <h2 class="section-title">Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>End-to-End Security</h3>
+                        <p>All communications are encrypted with AES-256-GCM and signed with Ed25519 for authenticity and integrity.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Low Power Optimized</h3>
+                        <p>Designed for battery-powered sensors with minimal packet overhead and efficient protocol design.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Auto Discovery</h3>
+                        <p>Sensors automatically discover hubs on the network using secure broadcast discovery protocol.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Key Rotation</h3>
+                        <p>Automatic key rotation for session and broadcast keys ensures long-term security.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📡</div>
+                        <h3>Broadcast Support</h3>
+                        <p>Efficient encrypted broadcast commands from hub to all sensors in the network.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Replay Protection</h3>
+                        <p>Timestamp-based replay protection with nonce validation prevents message replay attacks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spec-architecture">
+            <div class="container">
+                <h2 class="section-title">Protocol Architecture</h2>
+                <div class="architecture-content">
+                    <div class="architecture-diagram">
+                        <div class="packet-structure">
+                            <h3>Packet Structure</h3>
+                            <div class="packet-visual">
+                                <div class="packet-segment header">
+                                    <span class="segment-label">Header</span>
+                                    <span class="segment-size">12 bytes</span>
+                                </div>
+                                <div class="packet-segment payload">
+                                    <span class="segment-label">Encrypted Payload</span>
+                                    <span class="segment-size">Variable</span>
+                                </div>
+                                <div class="packet-segment signature">
+                                    <span class="segment-label">Ed25519 Signature</span>
+                                    <span class="segment-size">64 bytes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-types">
+                            <h3>Message Types</h3>
+                            <div class="message-grid">
+                                <div class="message-item">
+                                    <code>0x00</code>
+                                    <span>HUB_DISCOVERY_REQ</span>
+                                </div>
+                                <div class="message-item">
+                                    <code>0x01</code>
+                                    <span>EVENT_REPORT</span>
+                                </div>
+                                <div class="message-item">
+                                    <code>0x02</code>
+                                    <span>JOIN_REQUEST</span>
+                                </div>
+                                <div class="message-item">
+                                    <code>0x03</code>
+                                    <span>JOIN_RESPONSE</span>
+                                </div>
+                                <div class="message-item">
+                                    <code>0x04</code>
+                                    <span>BROADCAST_COMMAND</span>
+                                </div>
+                                <div class="message-item">
+                                    <code>0x05</code>
+                                    <span>KEY_ROTATION</span>
+                                </div>
+                                <div class="message-item">
+                                    <code>0x06</code>
+                                    <span>HUB_DISCOVERY_RESP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spec-implementation">
+            <div class="container">
+                <h2 class="section-title">Implementation Example</h2>
+                <div class="implementation-example">
+                    <div class="example-tabs">
+                        <button class="tab-button active" data-tab="motion">Motion Event</button>
+                        <button class="tab-button" data-tab="discovery">Hub Discovery</button>
+                        <button class="tab-button" data-tab="join">Device Join</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="motion">
+                        <h3>Motion Detection Event</h3>
+                        <div class="code-block">
+                            <pre><code>// Motion sensor reporting to hub
+Header:
+├─ Type: 0x01 (EVENT_REPORT)
+├─ Sensor ID: 0xAABBCCDD
+├─ Timestamp: 1721476800
+└─ Nonce: 0xC7F1A2
+
+Encrypted Payload (AES-256-GCM):
+├─ Event Type: 0x01 (Motion Detected)
+├─ Data Length: 0x04
+├─ Sensor Data: Temperature (22.5°C)
+└─ Battery Level: 85%
+
+Signature: Ed25519(Header + Encrypted Payload)
+Total Size: ~96 bytes</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="discovery">
+                        <h3>Hub Discovery Process</h3>
+                        <div class="code-block">
+                            <pre><code>// Sensor broadcasts discovery request
+Destination: 255.255.255.255:56700 (UDP Broadcast)
+
+Header:
+├─ Type: 0x00 (HUB_DISCOVERY_REQ)
+├─ Sensor ID: 0x00000000 (unassigned)
+├─ Timestamp: 1721476800
+└─ Nonce: 0x1A2B3C
+
+Payload:
+├─ Public Key: [32 bytes Ed25519 public key]
+└─ Device Info: "MotionSensor-v1.2"
+
+// Hub responds with discovery response
+Response: Unicast to sensor IP:port
+├─ Hub Identity: 0x12345678
+├─ Network Key ID: 0xABCD
+└─ Configuration: Join instructions</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="join">
+                        <h3>Device Join Handshake</h3>
+                        <div class="code-block">
+                            <pre><code>// Step 1: Sensor sends join request
+JOIN_REQUEST (0x02):
+├─ Device Capabilities
+├─ Requested Sensor ID
+└─ Authentication Challenge
+
+// Step 2: Hub validates and responds
+JOIN_RESPONSE (0x03):
+├─ Assigned Sensor ID: 0xAABBCCDD
+├─ Session Key: [32 bytes AES key]
+├─ Broadcast Key: [32 bytes for group messages]
+├─ Key Rotation Schedule
+└─ Network Configuration
+
+// Device is now authenticated and ready</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spec-security">
+            <div class="container">
+                <h2 class="section-title">Security Considerations</h2>
+                <div class="security-grid">
+                    <div class="security-item">
+                        <h3>Cryptographic Algorithms</h3>
+                        <ul>
+                            <li><strong>AES-256-GCM:</strong> Authenticated encryption for payloads</li>
+                            <li><strong>Ed25519:</strong> Digital signatures for message authenticity</li>
+                            <li><strong>X25519:</strong> Key agreement for session establishment</li>
+                            <li><strong>HKDF:</strong> Key derivation for session keys</li>
+                        </ul>
+                    </div>
+                    <div class="security-item">
+                        <h3>Key Management</h3>
+                        <ul>
+                            <li><strong>Device Keys:</strong> Ed25519 keypair per device</li>
+                            <li><strong>Session Keys:</strong> Rotated every 24 hours</li>
+                            <li><strong>Broadcast Keys:</strong> Rotated every 15 minutes</li>
+                            <li><strong>Key Storage:</strong> Secure flash or TPM recommended</li>
+                        </ul>
+                    </div>
+                    <div class="security-item">
+                        <h3>Attack Mitigation</h3>
+                        <ul>
+                            <li><strong>Replay Attacks:</strong> Timestamp + nonce validation</li>
+                            <li><strong>MITM Attacks:</strong> Ed25519 signature verification</li>
+                            <li><strong>Eavesdropping:</strong> End-to-end AES-256-GCM encryption</li>
+                            <li><strong>Key Compromise:</strong> Regular key rotation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="spec-resources">
+            <div class="container">
+                <h2 class="section-title">Resources & Downloads</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>📄 Specification Document</h3>
+                        <p>Complete protocol specification with detailed message formats and security considerations.</p>
+                        <a href="reference/shdc.md" class="btn btn-outline" download>Download Markdown</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="media/branding/logo-nbg.webp" alt="Env Open Logo" class="footer-logo">
+                    <p>Building the future with open source software.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Foundation</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="team.html">Our Team</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Standards</h4>
+                        <a href="standards.html">All Standards</a>
+                        <a href="shdc-protocol.html">SHDC Protocol</a>
+                        <a href="security-compliance.html">Security Compliance</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="contact.html">Join Us</a>
+                        <a href="https://github.com/envopentech" target="_blank">GitHub</a>
+                        <a href="#">Support</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Env Open. All rights reserved. | Website by Argo Nickerson</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Tab functionality for implementation examples
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetTab = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
