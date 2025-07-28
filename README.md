@@ -129,9 +129,9 @@ This website is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
-- **Email**: hello@envopen.org
-- **GitHub**: [github.com/envopentech](https://github.com/envopentech)
-- **Website**: [envopen.org](https://envopen.org)
+For more information, visit our GitHub repository or contact us directly:
+
+- **GitHub**: [github.com/envopen](https://github.com/envopen)
 
 ---
 
