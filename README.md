@@ -2,6 +2,9 @@
 
 This repository serves as the official website for Env Open, an open-source software foundation dedicated to creating and maintaining projects that make a positive impact on the world.
 
+# ADS
+Ads while enabled, will not be shown on this site
+
 ## About Env Open
 
 Env Open is an open-source first software foundation, meaning that all of our projects are either open source at launch, or will be open sourced within 1-2 years of development. We believe that open source software is the foundation of innovation and collaboration in the digital age.
