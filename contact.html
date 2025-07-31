@@ -1,13 +1,5 @@
 <!DOCTYPE html>
-<html>
-    <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="standards.html" class="nav-link">Standards</a>
-        <a href="team.html" class="nav-link">Team</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-    </nav>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +12,9 @@
     <link rel="icon" href="media/branding/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
     <header class="header">
@@ -33,6 +27,7 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="projects.html" class="nav-link">Projects</a>
+                <a href="standards.html" class="nav-link">Standards</a>
                 <a href="team.html" class="nav-link">Team</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
             </nav>
@@ -76,7 +71,7 @@
                                     <div class="contact-details">
                                         <h4>GitHub</h4>
                                         <p>Follow our repositories and contribute to our projects</p>
-                                        <a href="https://github.com/envopen" target="_blank" class="contact-link">github.com/envopen</a>
+                                        <a href="https://github.com/envopen" target="_blank" rel="noopener" class="contact-link">github.com/envopen</a>
                                     </div>
                                 </div>                            <div class="contact-method">
                                 <div class="method-icon">
@@ -197,7 +192,7 @@
                     <div class="footer-column">
                         <h4>Projects</h4>
                         <a href="projects.html">All Projects</a>
-                        <a href="https://github.com/envopen" target="_blank">GitHub</a>
+                        <a href="https://github.com/envopen" target="_blank" rel="noopener">GitHub</a>
                     </div>
                     <div class="footer-column">
                         <h4>Community</h4>
