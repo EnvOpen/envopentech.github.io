@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://envopen.org/sitemap.xml

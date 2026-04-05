@@ -1,218 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="google-adsense-account" content="ca-pub-6378331126315729">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore Env Open's open-source projects that are making a difference in the developer community and beyond.">
-    <meta name="keywords" content="open source projects, software development, programming, github">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Env Open">
-    <title>Projects - Env Open</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="media/branding/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="media/branding/logo-nbg.webp" alt="Env Open Logo" class="logo">
-                <span class="brand-text">Env Open</span>
-            </div>
-            <nav class="nav">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="projects.html" class="nav-link active">Projects</a>
-                <a href="standards.html" class="nav-link">Standards</a>
-                <a href="team.html" class="nav-link">Team</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </nav>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Open source projects from Stellarae. MIT-licensed software for systems that matter." />
+    <meta property="og:title" content="Stellarae | Projects" />
+    <meta property="og:description" content="Explore our collection of practical, auditable open source projects." />
+    <meta property="og:type" content="website" />
+    <title>Projects | Stellarae</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a" aria-hidden="true"></div>
+    <div class="bg-orb orb-b" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="brand">Stellarae</div>
+      <nav class="top-nav" aria-label="Site navigation">
+        <a class="header-link" href="./index.html">Home</a>
+        <a class="header-link active" href="./projects.html">Projects</a>
+        <a class="header-link" href="./about.html">About</a>
+        <a class="header-link" href="./solutions.html">Solutions</a>
+        <a class="header-link" href="./contact.html">Contact</a>
+      </nav>
+      <a class="header-link" href="https://github.com/stellaraedotdev" target="_blank" rel="noopener noreferrer">GitHub</a>
     </header>
 
     <main>
-        <section class="page-hero">
-            <div class="container">
-                <h1 class="page-title">Our Projects</h1>
-                <p class="page-subtitle">Discover the open-source projects we're building to empower developers and communities worldwide.</p>
-            </div>
-        </section>
+      <section class="panel content">
+        <p class="eyebrow">Our Projects</p>
+        <h1>Open Source Software You Can Audit and Deploy</h1>
+        <p>
+          All Stellarae projects are MIT-licensed and built for auditability. Use them individually
+          or combine them. No vendor dependencies—you maintain complete control.
+        </p>
 
-        <section class="projects">
-            <div class="container">
-                <div class="projects-filter">
-                    <button class="filter-btn active" data-filter="all">All Projects</button>
-                    <button class="filter-btn" data-filter="business">Business Applications</button>
-                    <button class="filter-btn" data-filter="tools">Developer Tools</button>
-                    <button class="filter-btn" data-filter="libraries">Libraries</button>
-                    <button class="filter-btn" data-filter="other">Other</button>
-                </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Purpose</th>
+              <th>Primary Interfaces</th>
+              <th>Typical Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>StellaraeSecure</strong></td>
+              <td colspan="3" style="opacity: 0.8;">Our collection of identity and authorization services. Includes staffdb for user identity, oauth2 server, 2fa service, and admin UI. All MIT-licensed and deployable independently.</td>
+            </tr>
+          </tbody>
+        </table>
 
-                <div class="projects-grid">
-                    <div class="project-card" data-category="libraries">
-                        <div class="project-image">
-                            <img src="media/projects/SHDC.webp" alt="Project showcase">
-                            <div class="project-overlay">
-                                <div class="project-status">
-                                    <span class="status-badge active">Active Development</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Py-SHDC</h3>
-                            <p class="project-description">A Python implementation of the SHDC (Smart Home Device Communications) protocol.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Networking</span>
-                                <span class="tech-tag">IOT</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="https://github.com/envopen/py-shdc" class="btn btn-outline" target="_blank" rel="noopener">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                    </svg>
-                                    GitHub
-                                </a>
-                                <a href="https://pyshdc.docs.envopen.org" class="btn btn-primary">Documentation</a>
-                            </div>
-                        </div>
-                    </div>
+        <div class="grid grid-2">
+          <article class="card">
+            <h2>Full Transparency</h2>
+            <ul>
+              <li>Read, audit, and modify all source code.</li>
+              <li>Comprehensive API documentation and examples.</li>
+              <li>Deployment guides for common environments.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h2>Production Ready</h2>
+            <ul>
+              <li>Operational runbooks and incident procedures.</li>
+              <li>Health/readiness contracts and observability.</li>
+              <li>Container images for multiple architectures.</li>
+            </ul>
+          </article>
+        </div>
 
-                    <div class="project-card" data-category="other">
-                        <div class="project-image">
-                            <img src="media/projects/project-filler.webp" alt="Project showcase">
-                            <div class="project-overlay">
-                                <div class="project-status">
-                                    <span class="status-badge active">Completed</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">OddOrEven</h3>
-                            <p class="project-description">A not so efficient world record python library</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">World Record</span>
-                                <span class="tech-tag">Odd or Even</span>
-                            </div>
-                            <div class="project-actions">
-                                <a href="https://github.com/envopen/OddOrEven" class="btn btn-outline" target="_blank" rel="noopener">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                    </svg>
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card" data-category="business">
-                        <div class="project-image">
-                            <img src="media/projects/EBS.webp" alt="Project showcase">
-                            <div class="project-overlay">
-                                <div class="project-status">
-                                    <span class="status-badge planning">Planning</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Env Open Business Suite</h3>
-                            <p class="project-description">From idea to implementation, we provide a comprehensive suite of tools for businesses, all under one roof.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Business</span>
-                                <span class="tech-tag">Commercial Use</span>
-                                <span class="tech-tag">Commerce</span>
-                            </div>
-                            <div class="project-actions">
-                                <!-- <a href="https://github.com/envopen/" class="btn btn-outline" target="_blank"> 
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                    </svg>
-                                    GitHub
-                                </a>
-                                <a href="#" class="btn btn-primary">Storybook</a> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="Devtools">
-                        <div class="project-image">
-                            <img src="media/projects/project-filler.webp" alt="Project showcase">
-                            <div class="project-overlay">
-                                <div class="project-status">
-                                    <span class="status-badge active">Active Development</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">DevCheck</h3>
-                            <p class="project-description">A basic command line tool to run comprehensive checks against your codebase.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Devtools</span>
-                                <span class="tech-tag">Command Line</span>
-                            </div>
-                            <!-- <div class="project-actions">
-                                <a href="https://github.com/envopen/py-shdc" class="btn btn-outline" target="_blank">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                    </svg>
-                                    GitHub
-                                </a>
-                                <a href="https://pyshdc.docs.envopen.org" class="btn btn-primary">Documentation</a>
-                            </div> -->
-                        </div>
-                    </div>
-                <div class="projects-cta">
-                    <h3>Have an Idea for a Project?</h3>
-                    <p>We're always looking for new ways to contribute to the open-source community. If you have an idea or want to collaborate on an existing project, we'd love to hear from you.</p>
-                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
-                </div>
-            </div>
-        </section>
+        <div class="notice">
+          Want to learn more? Check our GitHub repos and documentation sites for each project.
+          Questions? <a href="./contact.html">Get in touch</a>.
+        </div>
+      </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="media/branding/logo-nbg.webp" alt="Env Open Logo" class="footer-logo">
-                    <p>Building the future with open source software.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Foundation</h4>
-                        <a href="about.html">About Us</a>
-                        <a href="team.html">Our Team</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Projects</h4>
-                        <a href="projects.html">All Projects</a>
-                        <a href="https://github.com/envopen" target="_blank" rel="noopener">GitHub</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Community</h4>
-                        <a href="contact.html">Join Us</a>
-                        <a href="#">Contribute</a>
-                        <a href="#">Support</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Env Open. All rights reserved. | Website by Argo Nickerson</p>
-            </div>
-        </div>
+    <footer>
+      <p>Copyright 2026 Stellarae. Building transparent, auditable open source software.</p>
     </footer>
-
-    <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
